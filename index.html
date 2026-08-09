@@ -18,7 +18,7 @@
 <header class="navbar">
   <div class="container nav-inner">
     <a href="#home" class="logo">
-      <img src="logo.png" alt="Aditya Handicrafts" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <img src="logo.jpeg" alt="Aditya Handicrafts" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
       <span class="logo-fallback">Aditya <span>Handicrafts</span></span>
     </a>
     <nav class="nav-links">
@@ -31,10 +31,7 @@
       <a href="#fair">Fair</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="nav-actions">
-      <a href="Aditya%20Handicrafts-Company%20Profile.pdf.pdf" class="btn btn-outline" download>Download Business Brochure</a>
-      <a href="#contact" class="btn btn-primary">Get Inquiry</a>
-    </div>
+    <div class="nav-actions"></div>
     <button class="nav-toggle" aria-label="Open menu" id="navToggle">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
     </button>
@@ -45,7 +42,7 @@
 <div class="mobile-panel" id="mobilePanel">
   <div class="mobile-panel-inner">
     <div class="mobile-panel-head">
-      <img src="logo.png" alt="Aditya Handicrafts" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+      <img src="logo.jpeg" alt="Aditya Handicrafts" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
       <button class="mobile-panel-close" aria-label="Close menu" id="navClose">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
       </button>
@@ -60,10 +57,7 @@
       <a href="#fair">Fair</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="mobile-panel-actions">
-      <a href="Aditya%20Handicrafts-Company%20Profile.pdf.pdf" class="btn btn-outline" download>Download Business Brochure</a>
-      <a href="#contact" class="btn btn-primary">Get Inquiry</a>
-    </div>
+    <div class="mobile-panel-actions"></div>
   </div>
 </div>
 
@@ -77,7 +71,7 @@
   <div class="hero-inner">
     <div class="hero-collage">
       <div class="hero-visual" data-reveal="scale">
-        <img class="hero-image" src="factory.jpeg" alt="Aditya Handicrafts factory showcase" loading="lazy">
+        <img class="hero-image" id="heroMainImage" src="factory.jpeg" alt="Aditya Handicrafts factory showcase" loading="lazy">
         <div class="hero-visual-frame"></div>
         <div class="hero-wordmark">
           <div class="w1">Aditya</div>
@@ -88,26 +82,36 @@
           <div class="cap-title">Government of India<br>Recognized Export House</div>
         </div>
       </div>
-      <div class="hero-thumbs" data-reveal data-delay="120">
-        <div class="hero-thumb"><img class="hero-thumb-image" src="Blue Bone Inlay Nightstand Drawer Table Floral Handmade Bedside Furniture.jpg" alt="Craft detail preview" loading="lazy"></div>
-        <div class="hero-thumb"><img class="hero-thumb-image" src="3.png" alt="Furniture detail preview" loading="lazy"></div>
-        <div class="hero-thumb"><img class="hero-thumb-image" src="OUTDOOR.webp" alt="Inlay craft preview" loading="lazy"></div>
+      <div class="hero-carousel" data-reveal data-delay="120" id="heroCarousel">
+        <div class="hero-carousel-track" id="heroCarouselTrack">
+          <div class="hero-carousel-slide" data-title="Factory Showcase"><img src="factory.jpeg" alt="Factory preview" loading="lazy"></div>
+          <div class="hero-carousel-slide" data-title="Bone Inlay Detailing"><img src="Blue Bone Inlay Nightstand Drawer Table Floral Handmade Bedside Furniture.jpg" alt="Craft detail preview" loading="lazy"></div>
+          <div class="hero-carousel-slide" data-title="Case Goods Craftsmanship"><img src="3.png" alt="Furniture detail preview" loading="lazy"></div>
+          <div class="hero-carousel-slide" data-title="Outdoor Living Collection"><img src="OUTDOOR.webp" alt="Inlay craft preview" loading="lazy"></div>
+        </div>
+        <div class="hero-carousel-progress"><span id="heroCarouselProgressBar"></span></div>
+        <div class="hero-carousel-caption" id="heroCarouselCaption">Factory Showcase</div>
+        <button class="hero-carousel-btn prev" id="heroCarouselPrev" type="button" aria-label="Previous image">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="hero-carousel-btn next" id="heroCarouselNext" type="button" aria-label="Next image">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
-      <div class="hero-dots"><span class="active"></span><span></span><span></span></div>
+      <div class="hero-dots" id="heroDots"><span class="active" data-slide="0"></span><span data-slide="1"></span><span data-slide="2"></span><span data-slide="3"></span></div>
     </div>
 
     <div class="hero-copy">
-      <span class="eyebrow">Crafted in Jodhpur</span>
-      <h1 class="hero-title">Crafted in Jodhpur.<br><em>Created</em> for the World.</h1>
+      <h1 class="hero-title"><em>Created</em> for the World.</h1>
       <p class="hero-desc">Aditya Handicrafts is an established manufacturer and exporter of premium furniture and lifestyle products — from indoor and outdoor furniture to our signature hand-inlaid bone collections — serving discerning retailers, hospitality groups and sourcing partners worldwide.</p>
 
       <div class="hero-pullquote">
-        <p>"Rooted in Jodhpur, a city renowned for its rich heritage of craftsmanship, every piece we make carries that tradition forward."</p>
+        <p>"Rooted in tradition, shaped by craftsmanship, and made for global living."</p>
       </div>
 
       <div class="hero-actions">
         <a href="#collections" class="btn btn-gold">Explore Our Craft</a>
-        <a href="#contact" class="btn btn-ghost-light">Download Catalogue</a>
+        <a href="Aditya%20Handicrafts-Company%20Profile.pdf.pdf" class="btn btn-ghost-light" download>Download Company Profile</a>
       </div>
     </div>
   </div>
@@ -121,11 +125,8 @@
 <!-- =========== STATS =========== -->
 <section class="stats-bar" style="padding-top:64px;padding-bottom:64px;">
   <div class="container stats-grid">
-    <div class="stat" data-reveal><div class="stat-num"><span data-count="65000" data-suffix="+">0</span></div><div class="stat-label">Sq Ft Facility</div></div>
     <div class="stat" data-reveal data-delay="80"><div class="stat-num"><span data-count="100" data-suffix="+">0</span></div><div class="stat-label">Skilled Workforce</div></div>
-    <div class="stat" data-reveal data-delay="160"><div class="stat-num"><span data-count="25" data-suffix="">0</span></div><div class="stat-label">Containers / Month</div></div>
-    <div class="stat" data-reveal data-delay="240"><div class="stat-num"><span data-count="3" data-suffix="">0</span></div><div class="stat-label">Core Export Markets</div></div>
-    <div class="stat" data-reveal data-delay="320"><div class="stat-num"><span data-count="100" data-suffix="%">0</span></div><div class="stat-label">Wholly-Owned Facility</div></div>
+    <div class="stat" data-reveal data-delay="160"><div class="stat-num"><span data-count="30" data-suffix="+">0</span></div><div class="stat-label">Containers Capacity / Month</div></div>
   </div>
 </section>
 
@@ -142,13 +143,12 @@
       </div>
       <div class="about-copy" data-reveal="right">
         <span class="eyebrow">About Us</span>
-        <h2 class="section-title">Crafted in Jodhpur.<br>Created for the World.</h2>
+        <h2 class="section-title">Created for the World.</h2>
         <p>Rooted in Jodhpur, Rajasthan — a city renowned for its rich heritage of craftsmanship — Aditya Handicrafts is an established manufacturer and exporter of premium furniture and lifestyle products, serving discerning international buyers across global markets.</p>
         <p>With a diverse portfolio spanning indoor, outdoor, storage, kitchen and accent furniture, alongside distinctive bone inlay collections, barware, pet accessories and houseware, we offer a comprehensive sourcing destination for retailers, hospitality groups, designers and global sourcing partners. Our wholly owned manufacturing infrastructure brings together skilled craftsmanship, disciplined production and rigorous quality control.</p>
 
         <div class="signature">
           "Craft that outlives its era."
-          <small>— Aditya Bansal, Aditya Handicrafts</small>
         </div>
 
         <div class="vm-grid">
@@ -247,18 +247,14 @@
 
 <!-- =========== MANUFACTURING =========== -->
 <section class="mfg" id="manufacturing">
+  <div class="mfg-split-top"></div>
+  <div class="mfg-split-bottom"></div>
+  <div class="mfg-split-seam"></div>
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Manufacturing</span>
-      <h2 class="section-title">65,000 sq ft of<br>Precision and Patience</h2>
-      <p class="lead">Our wholly owned manufacturing setup allows us to maintain close oversight of production and finishing — supporting consistency across individual pieces as well as larger export orders.</p>
-    </div>
-
-    <div class="mfg-stats">
-      <div class="mfg-stat" data-reveal><div class="num"><span data-count="65000" data-suffix="">0</span></div><div class="lab">Sq Ft Facility</div></div>
-      <div class="mfg-stat" data-reveal data-delay="80"><div class="num"><span data-count="100" data-suffix="+">0</span></div><div class="lab">Office &amp; Factory Workforce</div></div>
-      <div class="mfg-stat" data-reveal data-delay="160"><div class="num"><span data-count="25" data-suffix="">0</span></div><div class="lab">Containers / Month</div></div>
-      <div class="mfg-stat" data-reveal data-delay="240"><div class="num">$<span data-count="500000" data-suffix="">0</span></div><div class="lab">Monthly Capacity (USD)</div></div>
+      <h2 class="section-title">Precision and Patience</h2>
+      <p class="lead">Our manufacturing setup allows us to maintain close oversight of production and finishing — supporting consistency across individual pieces as well as larger export orders.</p>
     </div>
 
     <div class="mfg-grid">
@@ -274,26 +270,6 @@
   </div>
 </section>
 
-<!-- =========== SUSTAINABILITY =========== -->
-<section class="bg-ivory">
-  <div class="container">
-    <div class="sus-grid">
-      <div class="sus-visual" data-reveal="left"><img class="sus-image" src="SEDEX.jpeg" alt="Responsible sourcing and craftsmanship" loading="lazy"></div>
-      <div data-reveal="right">
-        <span class="eyebrow">Responsible Sourcing</span>
-        <h2 class="section-title">Quality and Responsible<br>Sourcing, By Design</h2>
-        <p class="lead" style="margin-bottom:10px;">For international buyers, quality and responsible sourcing are integral to how we operate.</p>
-        <div class="sus-list">
-          <div class="sus-item"><div class="sus-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z" stroke-width="1.3"/></svg></div><div><h4>VRIKSH Certified</h4><p>Supporting responsible and legally compliant timber sourcing.</p></div></div>
-          <div class="sus-item"><div class="sus-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 21c4-2 6-5 6-9a6 6 0 0 0-12 0c0 4 2 7 6 9z" stroke-width="1.3"/></svg></div><div><h4>SEDEX / SMETA Audited</h4><p>Responsible business practices across labour, health &amp; safety, environment and ethics.</p></div></div>
-          <div class="sus-item"><div class="sus-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M6 7v13a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7M9 7V4h6v3" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div><h4>REX Registered</h4><p>Supporting preferential origin documentation for eligible EU exports.</p></div></div>
-          <div class="sus-item"><div class="sus-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 2.9 6.3 6.9.9-5 4.9 1.2 6.9L12 17.8l-6 3.2 1.2-6.9-5-4.9 6.9-.9L12 2z" stroke-width="1.3" stroke-linejoin="round"/></svg></div><div><h4>Recognized Export House</h4><p>One Star Export House, recognized under India's Foreign Trade Policy.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- =========== CERTIFICATIONS =========== -->
 <section class="bg-ivory-deep" id="certifications">
   <div class="container">
@@ -303,23 +279,22 @@
     </div>
     <div class="cert-grid">
       <div class="cert-card" data-reveal>
-        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 2.9 6.3 6.9.9-5 4.9 1.2 6.9L12 17.8l-6 3.2 1.2-6.9-5-4.9 6.9-.9L12 2z" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div class="cert-badge"><img src="onestar.webp" alt="One Star Export House logo" loading="lazy"></div>
         <h4>One Star Export House</h4>
         <p>Ministry of Commerce &amp; Industry, Directorate General of Foreign Trade, Government of India.</p>
       </div>
       <div class="cert-card" data-reveal data-delay="80">
-        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M9 3h6l2 4-5 3-5-3 2-4zM4 21v-6l5-3M20 21v-6l-5-3M4 21h16" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div class="cert-badge"><img src="sedex.png" alt="SEDEX logo" loading="lazy"></div>
         <h4>SEDEX / SMETA 4-Pillar</h4>
         <p>Ethical trade audit covering labour, health &amp; safety, environment and business ethics.</p>
-        <span class="cert-ref">ZC 402616792</span>
       </div>
       <div class="cert-card" data-reveal data-delay="160">
-        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 6v6c0 5 4 8.5 9 10 5-1.5 9-5 9-10V6l-9-4z" stroke-width="1.3"/></svg></div>
+        <div class="cert-badge"><img src="vriksh.png" alt="VRIKSH logo" loading="lazy"></div>
         <h4>VRIKSH</h4>
         <p>Timber legality assessment supporting responsible sourcing.</p>
       </div>
       <div class="cert-card" data-reveal data-delay="240">
-        <div class="cert-badge"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="7" width="18" height="13" rx="2" stroke-width="1.3"/><path d="M8 7V5a4 4 0 0 1 8 0v2" stroke-width="1.3"/></svg></div>
+        <div class="cert-badge"><img src="rex.jpg" alt="REX logo" loading="lazy"></div>
         <h4>REX</h4>
         <p>Registered Exporter System for eligible exports to the European Union.</p>
       </div>
@@ -487,7 +462,7 @@
     <span class="eyebrow" style="justify-content:center;">Work With Us</span>
     <h2 data-reveal>Bring Timeless Indian Craftsmanship To Your Market</h2>
     <div class="cta-actions">
-      <a href="Aditya%20Handicrafts-Company%20Profile.pdf.pdf" class="btn btn-gold" download>Download Business Brochure</a>
+      <a href="Aditya%20Handicrafts-Company%20Profile.pdf.pdf" class="btn btn-gold" download>Download Company Profile</a>
       <a href="#contact" class="btn btn-ghost-light">Schedule Meeting</a>
     </div>
   </div>
@@ -498,7 +473,7 @@
   <div class="container">
     <div class="section-head" data-reveal>
       <span class="eyebrow">Contact</span>
-      <h2 class="section-title">Let's Start With<br>Your First Sample</h2>
+      <h2 class="section-title">Contact Us</h2>
     </div>
     <div class="contact-grid">
       <div class="contact-info" data-reveal="left">
@@ -509,7 +484,7 @@
         </div>
         <div class="info-row">
           <div class="info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke-width="1.3"/><path d="m4 6 8 7 8-7" stroke-width="1.3"/></svg></div>
-          <div><h5>Email</h5><p>info@adityahandicrafts.com</p></div>
+          <div><h5>Email</h5><p>infor@adityahandicrafts.com</p></div>
         </div>
         <div class="info-row">
           <div class="info-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 5c0 8.3 6.7 15 15 15l3-4-6-3-2 2c-2-1-4-3-5-5l2-2-3-6-4 3z" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
@@ -519,7 +494,18 @@
           <div class="info-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="1.3"/><path d="M12 7v5l3 2" stroke-width="1.3" stroke-linecap="round"/></svg></div>
           <div><h5>Business Hours</h5><p>Mon – Sat, 9:00 AM – 7:00 PM IST</p></div>
         </div>
-        <div class="map-mini"></div>
+        <div class="map-mini">
+          <iframe
+            src="https://www.google.com/maps?q=F-199,%20MIA,%20Basni,%20II%20Phase,%20Jodhpur,%20Rajasthan%20342005,%20India&z=14&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Aditya Handicrafts location on Google Maps"
+          ></iframe>
+          <div class="map-mini-overlay">
+            <strong>Aditya Handicrafts</strong>
+            <p>F-199, MIA, Basni, II Phase, Jodhpur, Rajasthan 342005, India</p>
+          </div>
+        </div>
       </div>
 
       <div class="contact-form" data-reveal="right">
@@ -546,7 +532,7 @@
   <div class="container">
     <div class="foot-grid">
       <div>
-        <img src="logo.png" alt="Aditya Handicrafts" style="height:52px; width:auto; margin-bottom:18px;">
+        <img src="logo.jpeg" alt="Aditya Handicrafts" style="height:52px; width:auto; margin-bottom:18px;">
         <p class="foot-about">A Government of India recognized Export House, manufacturing and exporting handcrafted furniture and lifestyle products from Jodhpur, Rajasthan to the world.</p>
         <div class="foot-social">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke-width="1.3"/><circle cx="12" cy="12" r="4" stroke-width="1.3"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
@@ -569,14 +555,6 @@
         <a href="#collections">Bone Inlay</a>
         <a href="#collections">Barware</a>
         <a href="#collections">Houseware</a>
-      </div>
-      <div class="foot-col">
-        <h5>Newsletter</h5>
-        <p style="margin-bottom:16px;">New collections and trade fair dates, twice a month.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); this.reset(); this.querySelector('button').textContent='Subscribed';">
-          <input type="email" placeholder="Your email" required>
-          <button type="submit">Join</button>
-        </form>
       </div>
     </div>
     <div class="foot-bottom">
